@@ -389,18 +389,18 @@ int sortTask() {
     cout<<get_cost_time(tv_begin)<<" us"<<endl;
     cout<<endl;
 
-    vector<int> bubbleNums(nums);
-    cout<<"bubbleSort----------------------"<<endl;
-    if (dis) {
-        displayVector(nums);
-    }
-    gettimeofday(&tv_begin, NULL);
-    bubbleSort(bubbleNums);
-    if (dis) {
-        displayVector(bubbleNums);
-    }
-    cout<<get_cost_time(tv_begin)<<" us"<<endl;
-    cout<<endl;
+//    vector<int> bubbleNums(nums);
+//    cout<<"bubbleSort----------------------"<<endl;
+//    if (dis) {
+//        displayVector(nums);
+//    }
+//    gettimeofday(&tv_begin, NULL);
+//    bubbleSort(bubbleNums);
+//    if (dis) {
+//        displayVector(bubbleNums);
+//    }
+//    cout<<get_cost_time(tv_begin)<<" us"<<endl;
+//    cout<<endl;
 
     cout<<"mergeSort----------------------"<<endl;
     if (dis) {
@@ -415,31 +415,31 @@ int sortTask() {
     cout<<get_cost_time(tv_begin)<<" us"<<endl;
     cout<<endl;
 
-
-    cout<<"quickSort----------------------"<<endl;
-    if (dis) {
-        displayVector(nums);
-    }
-    gettimeofday(&tv_begin, NULL);
-    vector<int> quickSortre = quickSort(nums);
-    gettimeofday(&tv_end, NULL);
-    if (dis) {
-        displayVector(quickSortre);
-    }
-    cout<<get_cost_time(tv_begin)<<" us"<<endl;
-    cout<<endl;
-
-    cout<<"quickSortptr----------------------"<<endl;
-    if (dis) {
-        displayVector(nums);
-    }
-    gettimeofday(&tv_begin, NULL);
-    vector<int> *re1 = quickSort_ptr(nums);
-    gettimeofday(&tv_end, NULL);
-    if (dis) {
-        displayVector(*re1);
-    }
-    cout<<get_cost_time(tv_begin)<<" us"<<endl;
+//
+//    cout<<"quickSort----------------------"<<endl;
+//    if (dis) {
+//        displayVector(nums);
+//    }
+//    gettimeofday(&tv_begin, NULL);
+//    vector<int> quickSortre = quickSort(nums);
+//    gettimeofday(&tv_end, NULL);
+//    if (dis) {
+//        displayVector(quickSortre);
+//    }
+//    cout<<get_cost_time(tv_begin)<<" us"<<endl;
+//    cout<<endl;
+//
+//    cout<<"quickSortptr----------------------"<<endl;
+//    if (dis) {
+//        displayVector(nums);
+//    }
+//    gettimeofday(&tv_begin, NULL);
+//    vector<int> *re1 = quickSort_ptr(nums);
+//    gettimeofday(&tv_end, NULL);
+//    if (dis) {
+//        displayVector(*re1);
+//    }
+//    cout<<get_cost_time(tv_begin)<<" us"<<endl;
 
 
 //    cout<<"quickSort1----------------------"<<endl;
@@ -463,7 +463,6 @@ int sortTask() {
     }
     gettimeofday(&tv_begin, NULL);
     heapSortClass *heapSortSolution = new heapSortClass(heapSortNums, 1);
-
     gettimeofday(&tv_end, NULL);
     if (dis) {
         displayVector(heapSortSolution->a);
@@ -471,6 +470,19 @@ int sortTask() {
     cout<<get_cost_time(tv_begin)<<" us"<<endl;
     cout<<endl;
 
+    cout<<"cppSortClass----------------------"<<endl;
+    vector<int> cppSortNums(nums);
+    if (dis) {
+        displayVector(cppSortNums);
+    }
+    gettimeofday(&tv_begin, NULL);
+    sort(cppSortNums.begin(), cppSortNums.end());
+    gettimeofday(&tv_end, NULL);
+    if (dis) {
+        displayVector(cppSortNums);
+    }
+    cout<<get_cost_time(tv_begin)<<" us"<<endl;
+    cout<<endl;
 
 
 
